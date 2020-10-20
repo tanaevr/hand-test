@@ -1,0 +1,110 @@
+@import '~normalize.css/normalize.css';
+
+body {
+    font-family: Roboto;
+
+    color: #fff;
+    background-color: #000;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.world {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 330px;
+    margin: 0 auto;
+
+    & h1 {
+        text-align: center;
+        font-size: 20px;
+        line-height: 28px;
+
+        letter-spacing: 0.0015em;
+    }
+
+    &__item {
+        padding: 16px 16px;
+        background-color: #fff;
+        border-radius: 8px;
+        color: #000;
+        margin-bottom: 4px;
+        display: flex;
+
+        &__avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #f1f1f1;
+            margin-right: 16px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:before {
+                content: '';
+                display: block;
+                width: 20px;
+                height: 20px;
+            }
+
+            &--live {
+                background: linear-gradient(180deg, #AD00FF 0%, #FFB0E9 100%);
+                &:before {
+                    background: url('../img/live.svg') no-repeat 50% 50%;
+                }
+            }
+
+            &--living {
+                background: linear-gradient(180deg, #FFB800 0%, #FFF7B0 100%);
+                &:before {
+                    background: url('../img/living.svg') no-repeat 50% 50%;
+                }
+            }
+
+            &--dead {
+                background: linear-gradient(180deg, #0D658A 0%, #B0FFB4 100%);
+                &:before {
+                    background: url('../img/dead.svg') no-repeat 50% 50%;
+                }
+            }
+        }
+
+        &__title {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 28px;
+
+            letter-spacing: 0.0015em;
+        }
+
+        &__desc {
+            font-size: 14px;
+            line-height: 20px;
+
+            letter-spacing: 0.0025em;
+        }
+    }
+
+    &__btn {
+        display: block;
+
+        width: 100%;
+        padding: 10px;
+
+        font-size: 14px;
+        line-height: 1;
+
+        cursor: pointer;
+        letter-spacing: .0125em;
+        text-transform: uppercase;
+
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        background: #5a3472;
+    }
+}
